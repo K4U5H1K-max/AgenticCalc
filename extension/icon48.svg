@@ -1,0 +1,7 @@
+<!-- Simple SVG icon for 48x48 -->
+<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" fill="#4285f4" rx="8"/>
+  <circle cx="24" cy="24" r="18" fill="#ffffff" opacity="0.1"/>
+  <text x="24" y="32" text-anchor="middle" fill="white" font-family="Arial" font-size="24" font-weight="bold">∑</text>
+  <text x="24" y="14" text-anchor="middle" fill="white" font-family="Arial" font-size="8">Math</text>
+</svg>

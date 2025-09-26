@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agentic Math Settings</title>
+  <style>
+    .close-btn-test {
+      position: fixed !important;
+      top: 5px !important;
+      right: 5px !important;
+      width: 30px !important;
+      height: 30px !important;
+      background: #ff0000 !important;
+      color: #ffffff !important;
+      border: 2px solid #ffffff !important;
+      border-radius: 50% !important;
+      cursor: pointer !important;
+      z-index: 999999 !important;
+      font-size: 18px !important;
+      font-weight: bold !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  </style>
+  <style>
+    * { box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+      margin: 0; 
+      padding: 20px;
+      width: 350px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    .container {
+      background: rgba(255,255,255,0.1);
+      padding: 24px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      position: relative;
+    }
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 100;
+    }
+    h2 { 
+      margin: 0;
+      font-size: 1.4em; 
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    label { 
+      display: block; 
+      margin-bottom: 8px; 
+      font-weight: 500;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+    input[type="text"] { 
+      width: 100%; 
+      padding: 12px 16px; 
+      margin-bottom: 16px; 
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.1);
+      color: white;
+      font-size: 0.95em;
+      backdrop-filter: blur(10px);
+    }
+    input[type="text"]::placeholder {
+      color: rgba(255,255,255,0.6);
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border-color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.15);
+    }
+    button { 
+      padding: 12px 24px; 
+      background: rgba(255,255,255,0.2);
+      color: white; 
+      border: 1px solid rgba(255,255,255,0.3); 
+      border-radius: 8px; 
+      cursor: pointer; 
+      font-weight: 500;
+      font-size: 0.95em;
+      width: 100%;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(10px);
+    }
+    button:hover { 
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-1px);
+    }
+    .status { 
+      margin-top: 16px; 
+      padding: 12px 16px;
+      background: rgba(168,230,207,0.2);
+      border: 1px solid rgba(168,230,207,0.3);
+      border-radius: 8px;
+      font-size: 0.9em;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body>
+  <button type="button" id="close-popup" class="close-btn-test">×</button>
+  
+  <div class="container">
+    <div class="header-row">
+      <h2><span style="font-size: 1.2em;">∑</span>Agentic Math Settings</h2>
+    </div>
+    <form id="api-form">
+      <label for="groq-key">🔑 Groq API Key:</label>
+      <input type="text" id="groq-key" autocomplete="off" placeholder="Paste your GROQ_API_KEY here" />
+      
+      <label for="sympy-url">🔧 SymPy Server URL (optional):</label>
+      <input type="text" id="sympy-url" autocomplete="off" placeholder="http://localhost:5000/solve" />
+      
+      <button type="submit">💾 Save Settings</button>
+      <div class="status" id="status" style="display: none;"></div>
+    </form>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
